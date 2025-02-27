@@ -1,6 +1,5 @@
 # Senai_api_filmes
-# Api_Filmes
-api_filmes_senai é voltado especialmente para filmes e suas características, como gênero, diretor, etc. 
+Senai_api_filmes é voltado especialmente para filmes e suas características, como gênero, diretor, etc. 
 ## 📢 Começando 
 Iniciamos o projeto pelo Visual Studio Community, criando também: 
 #### Domains
