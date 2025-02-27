@@ -93,7 +93,7 @@ namespace api_filmes_senai.Repositories
                 
                 return listaDeFilmes;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw;
             }

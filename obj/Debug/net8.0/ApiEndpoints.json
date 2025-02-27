@@ -64,22 +64,6 @@
   },
   {
     "ContainingType": "api_filmes_senai.Controllers.FilmeController",
-    "Method": "Get",
-    "RelativePath": "api/Filme/{IdGenero}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "IdGenero",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "api_filmes_senai.Controllers.FilmeController",
     "Method": "GetById",
     "RelativePath": "api/Filme/BuscarPorId/{id}",
     "HttpMethod": "GET",
@@ -88,6 +72,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_filmes_senai.Controllers.FilmeController",
+    "Method": "GetByGenero",
+    "RelativePath": "api/Filme/listarporgenero/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -168,6 +168,22 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_filmes_senai.Controllers.UsuarioController",
+    "Method": "Post",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "api_filmes_senai.Domains.Usuario",
         "IsRequired": true
       }
     ],

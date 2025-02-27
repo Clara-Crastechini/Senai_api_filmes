@@ -15,11 +15,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 
 //Adicionando o repositorio e a interface ao container de injecao de dependencia
 builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
+builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>(); 
 
 //Adicionar o servico de controllers
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
+
 
 var app = builder.Build();
 
