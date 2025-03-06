@@ -16,7 +16,11 @@ namespace api_filmes_senai.Controllers
         {
             _filmeRepository = filmeRepository;
         }
-        
+
+        /// <summary>
+        /// Endpoint para listar os filmes cadastrados
+        /// </summary>
+        /// <returns>Filmes cadastrados</returns>
         [HttpGet]
         public IActionResult Get() {
             try
@@ -30,7 +34,11 @@ namespace api_filmes_senai.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint para Cadastrar um novo filme
+        /// </summary>
+        /// <param name="novoFilme">nome do filme cadastrado</param>
+        /// <returns>Novo Filme</returns>
         [HttpPost]
         public IActionResult Post(Filme novoFilme)
         {
@@ -45,7 +53,11 @@ namespace api_filmes_senai.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint para buscar um filme pelo seu id 
+        /// </summary>
+        /// <param name="id"> id do filme buscado</param>
+        /// <returns>Filme buscado</returns>
         [HttpGet("BuscarPorId/{id}")]
         public IActionResult GetById(Guid id)
         {
@@ -62,6 +74,13 @@ namespace api_filmes_senai.Controllers
             
         }
 
+
+        /// <summary>
+        /// Endpoint para atualizar o filme
+        /// </summary>
+        /// <param name="id">id filme</param>
+        /// <param name="filme">nome</param>
+        /// <returns>filme atualizado</returns>
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Filme filme)
         {
@@ -76,9 +95,13 @@ namespace api_filmes_senai.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
 
-        
+        /// <summary>
+        /// Endpoint para apagar um filme
+        /// </summary>
+        /// <param name="id">id filme</param>
+        /// <returns>nulo</returns>
+        [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
             try
@@ -93,6 +116,12 @@ namespace api_filmes_senai.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Endpoint para listar os filmes pelo id gênero
+        /// </summary>
+        /// <param name="Id">id gênero</param>
+        /// <returns>filmes</returns>
         [HttpGet("listarporgenero/{Id}")]
         public IActionResult GetByGenero(Guid Id)
         {

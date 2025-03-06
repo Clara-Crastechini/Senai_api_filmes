@@ -92,6 +92,7 @@ namespace api_filmes_senai.Repositories
                     _context.Genero.Remove(generoBuscado);
                 }
 
+                _context.SaveChanges();
             }
             catch (Exception)
             {

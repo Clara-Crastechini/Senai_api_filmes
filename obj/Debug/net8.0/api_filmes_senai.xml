@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_filmes_senai</name>
+    </assembly>
+    <members>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Get">
+            <summary>
+            Endpoint para listar os filmes cadastrados
+            </summary>
+            <returns>Filmes cadastrados</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Post(api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para Cadastrar um novo filme
+            </summary>
+            <param name="novoFilme">nome do filme cadastrado</param>
+            <returns>Novo Filme</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um filme pelo seu id 
+            </summary>
+            <param name="id"> id do filme buscado</param>
+            <returns>Filme buscado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Put(System.Guid,api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para atualizar o filme
+            </summary>
+            <param name="id">id filme</param>
+            <param name="filme">nome</param>
+            <returns>filme atualizado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Delete(System.Guid)">
+            <summary>
+            Endpoint para apagar um filme
+            </summary>
+            <param name="id">id filme</param>
+            <returns>nulo</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetByGenero(System.Guid)">
+            <summary>
+            Endpoint para listar os filmes pelo id gênero
+            </summary>
+            <param name="Id">id gênero</param>
+            <returns>filmes</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Get">
+            <summary>
+            Endpoint para listar os gêneros cadastrados
+            </summary>
+            <returns>Gêneros cadastrados</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Post(api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para Cadastrar um novo gênero
+            </summary>
+            <param name="novoGenero">nome do gênero cadastrado</param>
+            <returns>Novo gênero</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um Gênero pelo seu id 
+            </summary>
+            <param name="id"> id do Gênero buscado</param>
+            <returns>Gênero Buscado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Put(System.Guid,api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para atualizar o gênero
+            </summary>
+            <param name="id">id gênero</param>
+            <param name="genero">nome</param>
+            <returns>Gênero atualizado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Delete(System.Guid)">
+            <summary>
+            Endpoint para apagar um gênero
+            </summary>
+            <param name="id">id gênero</param>
+            <returns>nulo</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.Post(api_filmes_senai.Domains.Usuario)">
+            <summary>
+            Endpoint para Cadastrar um novo usuario
+            </summary>
+            <param name="novoGenero">nome do usuario cadastrado</param>
+            <returns>Novo usuario</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um usuario pelo seu id 
+            </summary>
+            <param name="id"> id do usuario buscado</param>
+            <returns>Usuario Buscado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.GetByEmailAndSenha(System.String,System.String)">
+            <summary>
+            Endpoint para buscar um usuario pelo seu email e senha 
+            </summary>
+            <param name="id">email e senha buscado</param>
+            <returns>Usuario Buscado</returns>
+        </member>
+        <member name="P:api_filmes_senai.Domains.Filme.IdGenero">
+            <summary>
+            Referência da tabela gênero
+            </summary>
+        </member>
+        <member name="T:api_filmes_senai.Migrations.Dbfilmes">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Dbfilmes.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Dbfilmes.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Dbfilmes.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_filmes_senai.Migrations.Db_Filmes_v2">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_v2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_v2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_v2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_filmes_senai.Repositories.FilmeRepository">
+            <summary>
+            Classe que vai implementar a interface IFilmeRepository
+            Ou seja,vamos implementar os metodos, toda a logicas dos metodos
+            </summary>
+        </member>
+        <member name="T:api_filmes_senai.Repositories.GeneroRepository">
+            <summary>
+            Classe que vai implementar a interface IGeneroRepository
+            Ou seja,vamos implementar os metodos, toda a logicas dos metodos
+            </summary>
+        </member>
+        <member name="M:api_filmes_senai.Repositories.GeneroRepository.#ctor(api_filmes_senai.Context.Filmes_Context)">
+            <summary>
+            Construtor do repositorio
+            Aqui, toda vez que o construtor for chamado, os dados do contexto estaram disponiveis
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:api_filmes_senai.Repositories.GeneroRepository.Cadastrar(api_filmes_senai.Domains.Genero)">
+            <summary>
+            Metodo para cadastrar um novo genero
+            </summary>
+            <param name="novoGenero"></param>
+        </member>
+    </members>
+</doc>
