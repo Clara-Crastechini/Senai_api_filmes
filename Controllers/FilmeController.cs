@@ -1,6 +1,7 @@
 ﻿using api_filmes_senai.Domains;
 using api_filmes_senai.Interfaces;
 using api_filmes_senai.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +40,7 @@ namespace api_filmes_senai.Controllers
         /// </summary>
         /// <param name="novoFilme">nome do filme cadastrado</param>
         /// <returns>Novo Filme</returns>
+        [Authorize]
         [HttpPost]
         public IActionResult Post(Filme novoFilme)
         {
@@ -81,6 +83,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id">id filme</param>
         /// <param name="filme">nome</param>
         /// <returns>filme atualizado</returns>
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Filme filme)
         {
@@ -101,6 +104,7 @@ namespace api_filmes_senai.Controllers
         /// </summary>
         /// <param name="id">id filme</param>
         /// <returns>nulo</returns>
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {

@@ -22,6 +22,12 @@ namespace api_filmes_senai.Controllers
             _usuarioRepository = usuarioRepository;
         }
 
+
+        /// <summary>
+        /// Endpoint para gerar o token de autenticação
+        /// </summary>
+        /// <param name="loginDTO">Email e Senha</param>
+        /// <returns>entrada no site</returns>
         [HttpPost]
         public IActionResult Login(LoginDTO loginDTO)
         {

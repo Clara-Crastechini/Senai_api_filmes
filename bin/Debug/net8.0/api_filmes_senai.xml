@@ -81,6 +81,13 @@
             <param name="id">id gênero</param>
             <returns>nulo</returns>
         </member>
+        <member name="M:api_filmes_senai.Controllers.LoginController.Login(api_filmes_senai.DTO.LoginDTO)">
+            <summary>
+            Endpoint para gerar o token de autenticação
+            </summary>
+            <param name="loginDTO">Email e Senha</param>
+            <returns>entrada no site</returns>
+        </member>
         <member name="M:api_filmes_senai.Controllers.UsuarioController.Post(api_filmes_senai.Domains.Usuario)">
             <summary>
             Endpoint para Cadastrar um novo usuario

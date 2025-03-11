@@ -319,7 +319,9 @@
         "tags": [
           "Login"
         ],
+        "summary": "Endpoint para gerar o token de autenticação",
         "requestBody": {
+          "description": "Email e Senha",
           "content": {
             "application/json": {
               "schema": {
@@ -523,6 +525,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Value: Bearer TokenJWT ",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
